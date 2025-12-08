@@ -30,4 +30,16 @@ public class PiNumberBenchmark {
         MathOperations.countPI(100_000_000);
     }
 
+    @Threads(6)
+    @Benchmark
+    public void benchmarkPiSixThreads() {
+        MathOperations.countPI(100_000_000);
+    }
+
+    @Threads(50)
+    @Benchmark
+    public void benchmarkPiFiftyThreads() {
+        MathOperations.countPI(100_000_000);
+    }
+
 }
